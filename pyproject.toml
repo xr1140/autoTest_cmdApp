@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "autoTest_cmdApp"
+version = "0.1.0"
+description = ""
+authors = ["XR1140 <xr1140@gmail.com>"]
+readme = "README.md"
+packages = [{include = "autoTest_cmdApp"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

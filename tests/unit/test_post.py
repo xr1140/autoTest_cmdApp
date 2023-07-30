@@ -1,0 +1,19 @@
+from unittest import TestCase
+from post import Post
+
+
+class PostTest(TestCase):
+    def test_create_post(self):
+        p = Post('Test', 'Content')
+
+        self.assertEqual('Test', p.title)
+        self.assertEqual('Content', p.content)
+
+    def test_json(self):
+        p = Post('Test', 'Content')
+        expected = {
+            'title': 'Test',
+            'content': 'Content'
+        }
+
+        self.assertDictEqual(expected, p.json())
